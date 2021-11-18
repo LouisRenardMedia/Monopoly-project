@@ -20,11 +20,12 @@ rep=200
 class square:
     def __init__(self, name, index) -> None:
         self.name = name
-        self.index = index
+        self.index=index
         self.gotojail = False
         self.counter=0
         self.injail=False
         self.jailcounter=0
+        self.chances=False
     def enter (self):
         self.counter+=1
         #print (self.name)
@@ -36,15 +37,26 @@ class square:
     def jailturns (self):
         self.jailcounter+=1
 
+class cards:
+    def __init__(self, name, index) -> None:
+        self.name = name
+        self.index = index
+        self.go = False
+    def chance (self):
+        return self.chances
+    def go ()
 
-
+cardnameschance = ["not1", "not2", "not3", "not4", "not5", "not6", "jail", "GO", "Trafalgar Square", "Mayfair", "pall mall", "near station 1", "near staion 2", "near utility", "back 3", "kings cross"]
+chance= []
 
 names = ["Go", "Old Kent Road", "Community", "Whitechapel Road", "income tax", "King's Cross station", "Chance", "The Angel Islington", "Euston Road", "Pentonville Road", "Visiting jail", "Pall Mall", "Electricity woks", "Whitehall", "Northumberland Avenue", "Marylebone station", "Bow Street", "Community 2", "Marlborough Street", "Vine Street", "Free parking", "The Strand", "Chance 2", "Fleet Street", "Trafalgar Square", "Fenchurch Street station", "Leicester Square", "Coventry Street", "Water works", "Piccadilly", "go to jail", "Regent Street", "Oxford Street", "Community 3", "Bond Street", "Liverpool Street station", "Chance 3", "Park Lane", "Super tax", "Mayfair", "Jail",]
 squares = []
+
 for name in names:
     squares.append(square(name, len(squares)))
 squares [30].gotojail=True
 squares [40].injail=True
+squares [6].chances=True
 #for case in squares:
     #print (case.name)
 jailturn=0
@@ -73,7 +85,11 @@ for i in range(rep):
         if squares[pos].gotojail:
             pos=40
         else:
-            squares[pos].enter()
+            if squares[pos].chances:
+                #pick card and have effect
+                print("yes")
+            else:
+                squares[pos].enter()
         
     
 for i in squares:
