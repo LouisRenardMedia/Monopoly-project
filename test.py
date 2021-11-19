@@ -1,6 +1,8 @@
 import random 
-import numpy
+import numpy 
 from datetime import datetime
+
+from numpy.lib.function_base import append
 class log:
     def  __init__(self, filename):
         self.file = open(filename,'a+')
@@ -14,7 +16,12 @@ def roll_dice():
     x = random.randint(1, 6)
     y = random.randint(1, 6)
     return [x,y]
-
+def pick ():
+        subs=random.choice(chance)
+        numpy.subtract(chance,subs)
+        return subs
+def newstack ():
+        chance=numpy.subtract(chance,subs)
 pos=0
 rep=200
 class square:
@@ -42,21 +49,42 @@ class cards:
         self.name = name
         self.index = index
         self.go = False
-    def chance (self):
+    def chanceof (self):
         return self.chances
-    def go ()
+    def pick (self):
+        self.subs=random.choice(chance)
+        return self.subs
+    def go ():
+        pos=0
+    def jail ():
+        pos=40
+    def trafalgar ():
+        pos=24
+    def mayfair ():
+        pos=39
+    def pallmall ():
+        pos=11
+    def back3 ():
+        pos=-3+pos
 
+
+chanceshuffled = []
 cardnameschance = ["not1", "not2", "not3", "not4", "not5", "not6", "jail", "GO", "Trafalgar Square", "Mayfair", "pall mall", "near station 1", "near staion 2", "near utility", "back 3", "kings cross"]
-chance= []
+chance= ["not1", "not2", "not3", "not4", "not5", "not6", "jail", "GO", "Trafalgar Square", "Mayfair", "pall mall", "near station 1", "near staion 2", "near utility", "back 3", "kings cross"]
 
-names = ["Go", "Old Kent Road", "Community", "Whitechapel Road", "income tax", "King's Cross station", "Chance", "The Angel Islington", "Euston Road", "Pentonville Road", "Visiting jail", "Pall Mall", "Electricity woks", "Whitehall", "Northumberland Avenue", "Marylebone station", "Bow Street", "Community 2", "Marlborough Street", "Vine Street", "Free parking", "The Strand", "Chance 2", "Fleet Street", "Trafalgar Square", "Fenchurch Street station", "Leicester Square", "Coventry Street", "Water works", "Piccadilly", "go to jail", "Regent Street", "Oxford Street", "Community 3", "Bond Street", "Liverpool Street station", "Chance 3", "Park Lane", "Super tax", "Mayfair", "Jail",]
+chanceshuffled.append(pick())
+
+
+names = ["Go", "Old Kent Road", "Community", "Whitechapel Road", "income tax", "King's Cross station", "The Angel Islington", "Chance", "Euston Road", "Pentonville Road", "Visiting jail", "Pall Mall", "Electricity woks", "Whitehall", "Northumberland Avenue", "Marylebone station", "Bow Street", "Community 2", "Marlborough Street", "Vine Street", "Free parking", "The Strand", "Chance 2", "Fleet Street", "Trafalgar Square", "Fenchurch Street station", "Leicester Square", "Coventry Street", "Water works", "Piccadilly", "go to jail", "Regent Street", "Oxford Street", "Community 3", "Bond Street", "Liverpool Street station", "Chance 3", "Park Lane", "Super tax", "Mayfair", "Jail",]
 squares = []
 
 for name in names:
     squares.append(square(name, len(squares)))
 squares [30].gotojail=True
 squares [40].injail=True
-squares [6].chances=True
+squares [7].chances=True
+squares [22].chances=True
+squares [36].chances=True
 #for case in squares:
     #print (case.name)
 jailturn=0
