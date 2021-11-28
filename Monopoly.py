@@ -52,7 +52,6 @@ class square:
     def jail (self):
         return self.injail
 
-
 class card:
     def __init__(self, name, target):
         self.name = name
