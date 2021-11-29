@@ -1,0 +1,41 @@
+Go                            : 2.92%
+Old Kent Road                 : 2.02%
+Community                     : 1.78%
+Whitechapel Road              : 2.05%
+income tax                    : 2.19%
+King's Cross station          : 2.79%
+The Angel Islington           : 2.14%
+Chance                        : 0.80%
+Euston Road                   : 2.19%
+Pentonville Road              : 2.17%
+Visiting jail                 : 2.14%
+Pall Mall                     : 2.56%
+Electricity woks              : 2.61%
+Whitehall                     : 2.17%
+Northumberland Avenue         : 2.42%
+Marylebone station            : 2.65%
+Bow Street                    : 2.67%
+Community 2                   : 2.30%
+Marlborough Street            : 2.82%
+Vine Street                   : 2.81%
+Free parking                  : 2.82%
+The Strand                    : 2.61%
+Chance 2                      : 1.03%
+Fleet Street                  : 2.57%
+Trafalgar Square              : 3.00%
+Fenchurch Street station      : 2.90%
+Leicester Square              : 2.54%
+Coventry Street               : 2.52%
+Water works                   : 2.65%
+Piccadilly                    : 2.44%
+go to jail                    : 0.00%
+Regent Street                 : 2.52%
+Oxford Street                 : 2.48%
+Community 3                   : 2.26%
+Bond Street                   : 2.36%
+Liverpool Street station      : 2.29%
+Chance 3                      : 0.85%
+Park Lane                     : 2.06%
+Super tax                     : 2.06%
+Mayfair                       : 2.49%
+Jail                          : 9.36%
