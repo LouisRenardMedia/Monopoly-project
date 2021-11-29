@@ -35,7 +35,7 @@ class square:
     def enter (self):
         self.counter+=1
     def statprint (self):
-        print ("{:30}: {:2.2%}".format(self.name,self.counter/(rep*1000000)))
+        print ("{:30}: {:2.2%}".format(self.name,self.counter/(rep*1000)))
     def jail (self):
         return self.injail
 
@@ -87,7 +87,7 @@ squares [17].community=True
 squares [33].community=True
 jailturn=0
 doubleturn=0
-for i in range(1000000):
+for i in range(1000):
     for i in range(rep):
         [x,y]=roll_dice()
         diceval= (x+y)
@@ -100,13 +100,27 @@ for i in range(1000000):
                 pos=10+diceval
                 jailturn=0
                 doubleturn=0
-                squares[pos].enter()
+                if squares[pos].chances:
+                    pickPremsMeDer(chanceshuffled).go()
+                    squares[pos].enter()
+                elif squares[pos].community:
+                    pickPremsMeDer(communitiShuffled).go()
+                    squares[pos].enter()
+                else :
+                    squares[pos].enter()
             else:
                 if x==y:
                     jailturn=0
                     doubleturn=0
                     pos=10+x+y
-                    squares[pos].enter()
+                    if squares[pos].chances:
+                        pickPremsMeDer(chanceshuffled).go()
+                        squares[pos].enter()
+                    elif squares[pos].community:
+                        pickPremsMeDer(communitiShuffled).go()
+                        squares[pos].enter()
+                    else :
+                        squares[pos].enter()
                 else :
                     jailturn+=1
                     squares[pos].enter()
@@ -114,11 +128,13 @@ for i in range(1000000):
             if doubleturn==3:
                 doubleturn=0
                 pos=40
+                squares[pos].enter()
             else:
                 pos+=diceval
                 pos=pos%40
                 if squares[pos].gotojail:
                     pos=40
+                    squares[pos].enter()
                 elif squares[pos].chances:
                     pickPremsMeDer(chanceshuffled).go()
                     squares[pos].enter()
