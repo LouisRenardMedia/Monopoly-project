@@ -96,7 +96,6 @@ for i in range(1000000):
         else:
             doubleturn=0
         if squares[pos].injail:
-            squares[pos].enter()
             if jailturn==2:
                 pos=10+diceval
                 jailturn=0
@@ -110,6 +109,7 @@ for i in range(1000000):
                     squares[pos].enter()
                 else :
                     jailturn+=1
+                    squares[pos].enter()
         else:
             if doubleturn==3:
                 doubleturn=0
